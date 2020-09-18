@@ -1,6 +1,6 @@
 # Support
 
-This is the Support Repo for Chef Habitat Base Plan Organisation - used to gather global issues that aren't for any particular plan. In the case of individual plans, please search at the [Org top level] (https://github.com/chef-base-plans) and raise the issue or PR against the particular plan.
+This is the Support Repo for Chef Habitat Base Plan Organisation - used to gather global issues that aren't for any particular plan. In the case of individual plans, please search at the [Org top level](https://github.com/chef-base-plans) and raise the issue or PR against the particular plan.
 
 
 ## Habitat Base Plans
@@ -13,7 +13,7 @@ You can browse all available packages that you can leverage and use, including p
 
 Any plans living in this Github Org tend to be central to the operation of the ecosystem itself, a dependency of a critical plan or else connected in such a way that it makes logical sense to include it outside of the [Core Plans Location](https://github.com/habitat-sh/core-plans)
 
-Community and more generally usable plans all live in [habitat-sh/core-plans] (https://github.com/habitat-sh/core-plans) Github Repository
+Community and more generally usable plans all live in [habitat-sh/core-plans](https://github.com/habitat-sh/core-plans) Github Repository
 
 The code for the core components of Habitat itself is in the [habitat-sh/habitat](https://github.com/habitat-sh/habitat/) GitHub repository.
 
@@ -23,7 +23,7 @@ Get started with the [Habitat tutorials](https://www.habitat.sh/tutorials/) or p
 
 ## Design Proposals
 
-As per the Chef OSS Guidelines - [Design Proposals] (https://github.com/chef/chef-oss-practices/blob/master/contributors/guide/design-proposals.md) should follow this guidance
+As per the Chef OSS Guidelines - [Design Proposals](https://github.com/chef/chef-oss-practices/blob/master/contributors/guide/design-proposals.md) should follow this guidance
 
 
 ## License
