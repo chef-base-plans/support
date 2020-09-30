@@ -10,17 +10,30 @@ Install [meta](https://github.com/mateodelnorte/meta#readme)
 
 ## Usage
 
-Clone all the child repositories by running ``meta git update``, which will checkout all repositories in the structure defined in the .meta file.  See example output [below](#example-meta-clone).
+Clone all the child repositories by running ``meta git update``, which will checkout all repositories in the structure defined in the .meta file.  See example output [in the Appendix](#example-meta-clone).  This will produce a repository directory structure with all repos/plans available for editing.
 
-Build and run inspec tests against one of the base-plan repositories.  See example inspec output [below](#example-inspec-test-result)
+```bash
+repos/chef-base-plans/admin       # <== contains admin repos like 'support', 'base-plan-skeleton', and 'plan-builder'
+repos/chef-base-plans/base-plans  # <== contains all the chef-base-plans, currently >200
+repos/core-plans                  # <== contains the core-plans repo
+```
+
+Build and run inspec tests against one of the base-plan repositories.
 
 * cd to repos/chef-base-plans/base-plans
 * enter ``hab studio enter``, which will load the ``repos/chef-base-plans/base-plans/.studiorc`` and make available some helper methods.
 * cd into a base plan, e.g., zip
 * Type ``plan build`` to build a fresh hab artifact or ``plan load`` to load an existing one
-* Type ``plan verify`` to run inspec tests.  For example, the inspec output for zip looks something like:
+* Type ``plan verify`` to run inspec tests.  See example inspec output [in the Appendix](#example-inspec-test-result)
 
 Update all existing repositories:  ``meta git pull``
+
+Add a new chef-base-plans repository to the .meta.  For example:  ``meta project import repos/chef-base-plans/base-plans/sqitch https://github.com/chef-base-plans/sqitch.git``
+
+For more information and examples of meta commands, refer to the following sites:
+
+* <https://github.com/mateodelnorte/meta#readme>
+* <https://medium.com/@patrickleet/mono-repo-or-multi-repo-why-choose-one-when-you-can-have-both-e9c77bd0c668>
 
 # Appendix
 

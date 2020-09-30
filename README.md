@@ -17,7 +17,7 @@ Community and more generally usable plans all live in [habitat-sh/core-plans](ht
 
 The code for the core components of Habitat itself is in the [habitat-sh/habitat](https://github.com/habitat-sh/habitat/) GitHub repository.
 
-**NOTE:** instructions are included [here] on how to get started checking out, building, and inspec testing the base plans [here](examples/chef_base_plans_parent/README.md)
+**NOTE:** instructions are included [here](examples/chef_base_plans_parent/README.md) on how to get started checking out, building, and inspec testing the base plans.
 
 ## Documentation
 

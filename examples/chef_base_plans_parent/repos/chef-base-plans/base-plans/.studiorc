@@ -4,10 +4,8 @@ plan() {
       rm -rf ${__dir}/results
       
       echo "building the artifact"
-      (
-          cd ${__dir}
-          if ! build ${__dir}/. ; then echo "STOP: make sure your're in a hab studio and retry" && exit 1; fi
-      )
+      cd ${__dir}
+      if ! build ${__dir}/. ; then echo "STOP: make sure your're in a hab studio and retry" && exit 1; fi
   }
 
   load() {
@@ -24,20 +22,20 @@ plan() {
       set +x
   }
 
-	help() {
-		cat <<-EOF
-		./$(basename "$0") help
+  help() {
+    cat <<-EOF
+		plan help
 		
 		# build plan for the first time
-		./$(basename "$0") build
+		plan build
 
 		# OR optionally load an existing build beneath results/
-		./$(basename "$0") load
+		plan load
 
 		# run the inspec tests
-		./$(basename "$0") verify docker
-		EOF
-	}
+		plan verify
+	EOF
+  }
 
   ####### MAIN
 
