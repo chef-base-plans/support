@@ -23,8 +23,6 @@
 /repos/chef-base-plans/base-plans/bzip2/
 /repos/chef-base-plans/base-plans/cacerts/
 /repos/chef-base-plans/base-plans/check/
-/repos/chef-base-plans/base-plans/chef-client/
-/repos/chef-base-plans/base-plans/chef-workstation/
 /repos/chef-base-plans/base-plans/clens/
 /repos/chef-base-plans/base-plans/cmake/
 /repos/chef-base-plans/base-plans/concourse/
@@ -81,7 +79,6 @@
 /repos/chef-base-plans/base-plans/iana-etc/
 /repos/chef-base-plans/base-plans/inetutils/
 /repos/chef-base-plans/base-plans/inputproto/
-/repos/chef-base-plans/base-plans/inspec-client/
 /repos/chef-base-plans/base-plans/iproute2/
 /repos/chef-base-plans/base-plans/iptables/
 /repos/chef-base-plans/base-plans/jq-static/
@@ -216,6 +213,9 @@
 /repos/chef-base-plans/base-plans/zip/
 /repos/chef-base-plans/base-plans/zlib-musl/
 /repos/chef-base-plans/base-plans/zlib/
+/repos/chef-base-plans/chef-plans/chef-client/
+/repos/chef-base-plans/chef-plans/chef-workstation/
+/repos/chef-base-plans/chef-plans/inspec-client/
 /repos/core-plans/
 /scripts/results/
 results/

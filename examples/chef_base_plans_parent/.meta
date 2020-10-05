@@ -23,8 +23,6 @@
     "repos/chef-base-plans/base-plans/bzip2-musl": "https://github.com/chef-base-plans/bzip2-musl.git",
     "repos/chef-base-plans/base-plans/cacerts": "https://github.com/chef-base-plans/cacerts.git",
     "repos/chef-base-plans/base-plans/check": "https://github.com/chef-base-plans/check.git",
-    "repos/chef-base-plans/base-plans/chef-client": "https://github.com/chef-base-plans/chef-client.git",
-    "repos/chef-base-plans/base-plans/chef-workstation": "https://github.com/chef-base-plans/chef-workstation.git",
     "repos/chef-base-plans/base-plans/clens": "https://github.com/chef-base-plans/clens.git",
     "repos/chef-base-plans/base-plans/cmake": "https://github.com/chef-base-plans/cmake.git",
     "repos/chef-base-plans/base-plans/concourse": "https://github.com/chef-base-plans/concourse.git",
@@ -81,7 +79,6 @@
     "repos/chef-base-plans/base-plans/iana-etc": "https://github.com/chef-base-plans/iana-etc.git",
     "repos/chef-base-plans/base-plans/inetutils": "https://github.com/chef-base-plans/inetutils.git",
     "repos/chef-base-plans/base-plans/inputproto": "https://github.com/chef-base-plans/inputproto.git",
-    "repos/chef-base-plans/base-plans/inspec-client": "https://github.com/chef-base-plans/inspec-client.git",
     "repos/chef-base-plans/base-plans/iproute2": "https://github.com/chef-base-plans/iproute2.git",
     "repos/chef-base-plans/base-plans/iptables": "https://github.com/chef-base-plans/iptables.git",
     "repos/chef-base-plans/base-plans/jq-static": "https://github.com/chef-base-plans/jq-static.git",
@@ -214,6 +211,9 @@
     "repos/chef-base-plans/base-plans/zip": "https://github.com/chef-base-plans/zip.git",
     "repos/chef-base-plans/base-plans/zlib": "https://github.com/chef-base-plans/zlib.git",
     "repos/chef-base-plans/base-plans/zlib-musl": "https://github.com/chef-base-plans/zlib-musl.git",
+    "repos/chef-base-plans/chef-plans/chef-client": "https://github.com/chef-base-plans/chef-client.git",
+    "repos/chef-base-plans/chef-plans/chef-workstation": "https://github.com/chef-base-plans/chef-workstation.git",
+    "repos/chef-base-plans/chef-plans/inspec-client": "https://github.com/chef-base-plans/inspec-client.git",
     "repos/core-plans": "https://github.com/habitat-sh/core-plans"
   }
 }
