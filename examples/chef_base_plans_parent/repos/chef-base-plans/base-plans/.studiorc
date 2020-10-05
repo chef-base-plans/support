@@ -1,0 +1,56 @@
+plan() {
+  _build() {
+      echo "deleting all previous results"
+      rm -rf ${__dir}/results
+      
+      echo "building the artifact"
+      cd ${__dir}
+      if ! build ${__dir}/. ; then echo "STOP: make sure your're in a hab studio and retry" && exit 1; fi
+  }
+
+  load() {
+      source ${LAST_BUILD_ENV_FILE}
+      hab pkg install ${__dir}/results/$pkg_artifact
+  }
+
+  verify() {
+      hab pkg install chef/inspec
+      source ${LAST_BUILD_ENV_FILE} 
+      set -x
+      hab pkg exec chef/inspec inspec exec ${__dir}/. --chef-license=accept \
+          --input-file ${__dir}/attributes.yml
+      set +x
+  }
+
+  help() {
+    cat <<-EOF
+		plan help
+		
+		# build plan for the first time
+		plan build
+
+		# OR optionally load an existing build beneath results/
+		plan load
+
+		# run the inspec tests
+		plan verify
+	EOF
+  }
+
+  ####### MAIN
+
+  __dir=$PWD
+  LAST_BUILD_ENV_FILE=${__dir}/results/last_build.env
+
+  # BOMB OUT IF...
+  # ...if no parameters passed in
+  if [[ ("${@}" == "") ]]; then help && exit 0; fi
+  # ...if no plan.sh present in the execution directory
+  if [[ ! -f "${__dir}/plan.sh" ]]; then echo "must be in a habitat plan directory" && exit 1; fi
+
+  # WHEN 'build' parameter passed in, then trasform to '_build' so that we trigger our function and not hab's!
+  if [[ "${1}" == "build" ]]; then set -- "_build"; fi
+
+  # run the command, i.e., help, load, verify etc
+  "${@}"
+}
