@@ -10,12 +10,36 @@ Install [meta](https://github.com/mateodelnorte/meta#readme)
 
 ## Usage
 
-Clone all the child repositories by running ``meta git update``, which will checkout all repositories in the structure defined in the .meta file.  See example output [in the Appendix](#example-meta-clone).  This will produce a repository directory structure with all repos/plans available for editing.
+Clone all the child repositories by running ``meta git update``, which will checkout all repositories in the structure defined in the .meta file.  See example output [in the Appendix](#example-meta-clone).  This will produce a repository directory structure with all repos/plans available for editing:
+
+* repos/chef-base-plans/admin         ==> contains admin repos like 'support', 'base-plan-skeleton', and 'plan-builder'
+* repos/chef-base-plans/base-plans    ==> contains all the chef-base-plans, currently >200
+* repos/chef-base-plans/chef-plans    ==> contains some chef-owned plans that rely on the base-plans
+* repos/core-plans                    ==> contains the core-plans repo
+
+For example, beneath the repos directory:
 
 ```bash
-repos/chef-base-plans/admin       # <== contains admin repos like 'support', 'base-plan-skeleton', and 'plan-builder'
-repos/chef-base-plans/base-plans  # <== contains all the chef-base-plans, currently >200
-repos/core-plans                  # <== contains the core-plans repo
+tree . -d
+├── chef-base-plans
+│   ├── admin
+│   │   ├── base-plan-skeleton
+│   │   ├── plan-builder
+│   │   └── support
+│   ├── base-plans
+│   │   ├── acl
+        ...
+        ...
+│   │   └── zlib-musl
+│   └── chef-plans
+│       ├── chef-client
+│       ├── chef-workstation
+│       └── inspec-client
+└── core-plans
+    ├── 7zip
+    ...
+    ...
+    └── zstd
 ```
 
 Build and run inspec tests against one of the base-plan repositories.
